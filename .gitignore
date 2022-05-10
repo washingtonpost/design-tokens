@@ -28,7 +28,6 @@ resources/dist/**
 /cypress/videos/**
 
 /packages/*/index.js
-/packages/site-components/css/index.css
 
 /public
 .now

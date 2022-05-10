@@ -1,5 +1,4 @@
 import React from 'react';
-import '@washingtonpost/site-components/css/index.css';
 import spacingTokens from '../packages/spacing/tokens.json';
 
 export default {

@@ -1,5 +1,4 @@
 import React from 'react';
-import '@washingtonpost/site-components/css/index.css';
 import colorTokens from '../packages/colors/tokens.json';
 
 export default {

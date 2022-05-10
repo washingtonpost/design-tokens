@@ -1,5 +1,4 @@
 import React from 'react';
-import '@washingtonpost/site-components/css/index.css';
 import motionTokens from '../packages/motion/dist/json-flat/tokens.json';
 
 export default {

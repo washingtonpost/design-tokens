@@ -1,5 +1,4 @@
 import React from "react";
-import "@washingtonpost/site-components/css/index.css";
 import typographyTokens from "../packages/typography/tokens.json";
 
 export default {
