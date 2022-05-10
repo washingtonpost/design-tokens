@@ -1,0 +1,47 @@
+name: Validate
+
+on:
+  pull_request:
+    paths:
+      - "packages/**/*"
+      - "package.json"
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.17.3
+          cache: "npm"
+          always-auth: true
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
+      - uses: actions/upload-artifact@v2.2.4
+        with:
+          name: dist-tokens
+          path: |
+            packages/**/dist
+            !packages/**/node_modules
+
+      - uses: danger/danger-js@10.6.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: chromaui/action@v1
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        with:
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          exitOnceUploaded: true

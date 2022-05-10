@@ -1,0 +1,7 @@
+expandProps: false
+dimensions: true
+svgProps: {
+    width: "{width}",
+    height: "{height}",
+    className: "{className}"
+}

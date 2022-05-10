@@ -1,0 +1,14 @@
+name: Label Tool
+
+on: pull_request
+
+jobs:
+  labelPR:
+    name: Label PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label PRs
+        uses: adamzolyak/monorepo-pr-labeler-action@2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_DIRS: "packages"

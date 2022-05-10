@@ -1,0 +1,37 @@
+name: Stable NPM Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  create-main-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.17.3
+          cache: "npm"
+          always-auth: true
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
+      - name: Create Stable Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          HUSKY_SKIP_HOOKS: 1
+        run: |
+          git checkout .
+          git config --global user.email "github-actions-bot@users.noreply.github.com"
+          git config --global user.name "wpds-github-actions"
+          npm run ver
+          npm run build
+          npm run pub
