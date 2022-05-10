@@ -1,5 +1,4 @@
 import React from 'react';
-import '@washingtonpost/site-components/css/index.css';
 import shadowTokens from '../packages/shadows/tokens.json';
 
 export default {
