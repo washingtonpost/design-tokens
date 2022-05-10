@@ -1,0 +1,64 @@
+{
+  "name": "@washingtonpost/design-tokens",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Design tokens for The Washington Post design system",
+  "scripts": {
+    "format:prettier": "prettier-eslint --write --eslint-ignore --print-width=120 --single-quote --no-bracket-spacing",
+    "build": "lerna run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap": "lerna bootstrap",
+    "postinstall": "lerna bootstrap",
+    "ver": "lerna version --conventional-commits --yes --force-publish --conventional-graduate",
+    "pub": "lerna publish from-git --yes --no-git-reset",
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -s ./fonts -p 6006",
+    "build-storybook": "build-storybook -s fonts",
+    "prepare": "node ./scripts/prepare.js",
+    "subset-fonts": "node ./fonts/subsetFonts.js && cd ./fonts/ && glyphhanger supported-characters.txt --subset=*.otf --formats=woff2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:WPMedia/wp-design-tokens.git"
+  },
+  "author": "The Washington Post",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WPMedia/wp-design-tokens/issues"
+  },
+  "homepage": "https://github.com/WPMedia/wp-design-tokens#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/addon-measure": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.3.6",
+    "@storybook/manager-webpack5": "^6.3.6",
+    "@storybook/react": "^6.3.6",
+    "@svgr/cli": "^5.5.0",
+    "@washingtonpost/danger": "^1.1.4",
+    "babel-loader": "^8.2.2",
+    "chromatic": "^5.10.0-canary.0",
+    "common-tags": "^1.8.0",
+    "glyphhanger": "^4.0.1",
+    "husky": "^7.0.0",
+    "lerna": "^4.0.0",
+    "prettier-eslint": "^13.0.0",
+    "prettier-eslint-cli": "^5.0.1",
+    "style-dictionary": "^3.0.1",
+    "webpack": "^5.47.0"
+  },
+  "engines": {
+    "yarn": "YARN NO LONGER USED - use npm instead.",
+    "npm": "^8",
+    "node": "^14"
+  },
+  "dependencies": {
+    "@washingtonpost/site-components": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

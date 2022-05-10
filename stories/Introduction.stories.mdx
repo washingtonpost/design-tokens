@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# The Washington Post Design Tokens
+
+The project is a work in progress. The goal is to distribute design tokens for The Washington Post design system for multiple platforms (web, iOS, Android). Tokens are compiled using Style Dictionary. Each package in this repository contains a set of values related to core design needs like color, space, typography, etc.
+
+## What are design tokens?
+
+*Design tokens act as variables that store your styles so that your color, text, and other style attributes will always be up-to-date.*
+
+— [A step-by-step guide to using design tokens in InVision DSM](https://www.invisionapp.com/inside-design/dsm-design-tokens/) 
+
+## Who is in charge of tokens?
+
+The design system team organizes and releases tokens and updates. Questions? Head to the #the-post-design-system channel on Slack.
+
+## How do we name tokens?
+
+Semantics! Tokens can be released with multiple names for the same value. This helps both create context-agnostic names and names that communicate the intended purpose of a token. Adobe explains this very well here.
+
+For example, the election design system has a color with the hex value `#477b2f`. The color has a "Global token” name of `$green-50`. But `$green-50` is also used to indicated the Green Party, the 2nd Democratic candidate running in a primary, or the 5th designated Republican in a primary. The token could also be shipped with the contextual “Alias token” name `$color-green-party`, `$color-democrat-2` and `$color-republican-5`. Adobe also outlines another level of specificity, Component-specific tokens. That green color could also be shipped as `$map-fill-color-democrat-2` to indicate its use as an SVG map fill color.
+
+## Release workflow
+
+1. Update the design system
+2. Release a design system new version
+3. Ensure tokens are correct in the wp-design-tokens package
+4. Release a new version of the package. Notes should reference the design system version
+5. Message out token updates.
+    - Slack channel notification through #the-post-design-system
+    - Versioned releases: https://github.com/WPMedia/wp-design-tokens/releases
+
+## Examples
+- [SalesForce](https://www.lightningdesignsystem.com/design-tokens/) 
+- [Adobe Spectrum](https://spectrum.adobe.com/page/design-tokens/)
+- [Sprout Social](https://seeds.sproutsocial.com/resources/tokens/)
+
+## Resources
+
+- https://www.invisionapp.com/inside-design/dsm-design-tokens/
+- https://support.invisionapp.com/hc/en-us/articles/115005682283#using-design-tokens-in-development
+- https://medium.com/eightshapes-llc/tokens-in-design-systems-25dd82d58421
+- https://medium.com/eightshapes-llc/versioning-design-systems-48cceb5ace4d
+- https://badootech.badoo.com/design-tokens-beyond-colors-typography-and-spacing-ad7c98f4f228
+- https://github.com/design-tokens/community-group

@@ -1,0 +1,23 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "npm",
+  "command": {
+    "version": {
+      "allowBranch": [
+        "main",
+        "dev"
+      ],
+      "conventionalCommits": true,
+      "message": "chore(release): publish"
+    },
+    "publish": {
+      "allowBranch": [
+        "main",
+        "dev"
+      ]
+    }
+  },
+  "version": "1.9.0"
+}

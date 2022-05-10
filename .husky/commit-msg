@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit || (echo "\nRead about commit message formatting in the README.md" && exit 1)

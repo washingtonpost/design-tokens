@@ -1,0 +1,26 @@
+{
+  "name": "@washingtonpost/typography-tokens",
+  "version": "1.9.0",
+  "description": "WaPo typography tokens",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:WPMedia/wp-design-tokens.git"
+  },
+  "author": "The Washington Post",
+  "bugs": {
+    "url": "https://github.com/WPMedia/wp-design-tokens/issues"
+  },
+  "homepage": "https://github.com/WPMedia/wp-design-tokens#readme",
+  "license": "ISC",
+  "gitHead": "85b711df369af151bfb5b2be9e587b6eb47f41d0"
+}

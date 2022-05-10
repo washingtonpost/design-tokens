@@ -1,0 +1,31 @@
+{
+  "name": "@washingtonpost/logo-tokens",
+  "version": "1.9.0",
+  "description": "WaPo Logo Tokens",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js;npm run svg-react",
+    "svg-react": "npx svgr --title-prop --template svgr-template.js --no-svgo --memo -d dist/react assets"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:WPMedia/wp-design-tokens.git"
+  },
+  "author": "The Washington Post",
+  "bugs": {
+    "url": "https://github.com/WPMedia/wp-design-tokens/issues"
+  },
+  "homepage": "https://github.com/WPMedia/wp-design-tokens#readme",
+  "license": "ISC",
+  "devDependencies": {
+    "@svgr/cli": "^5.5.0"
+  },
+  "gitHead": "85b711df369af151bfb5b2be9e587b6eb47f41d0"
+}
