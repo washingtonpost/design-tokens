@@ -16,13 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:WPMedia/wp-design-tokens.git"
+    "url": "git+ssh://git@github.com:washingtonpost/wp-design-tokens.git"
   },
   "author": "The Washington Post",
   "bugs": {
-    "url": "https://github.com/WPMedia/wp-design-tokens/issues"
+    "url": "https://github.com/washingtonpost/wp-design-tokens/issues"
   },
-  "homepage": "https://github.com/WPMedia/wp-design-tokens#readme",
+  "homepage": "https://github.com/washingtonpost/wp-design-tokens#readme",
   "license": "ISC",
   "devDependencies": {
     "@svgr/cli": "^5.5.0"
