@@ -4,8 +4,8 @@ const configureRules = require("@washingtonpost/danger").default; // default req
 const jiraProjects = ["WPDS"];
 
 module.exports.default = async () => {
-  const branchName = danger.github.pr.head.label.replace("WPMedia:", "");
-  const baseName = danger.github.pr.base.label.replace("WPMedia:", "");
+  const branchName = danger.github.pr.head.label.replace("washingtonpost:", "");
+  const baseName = danger.github.pr.base.label.replace("washingtonpost:", "");
 
   const repo = await configureRules({
     appFiles: "packages/**/*.{js,json,svg}",
