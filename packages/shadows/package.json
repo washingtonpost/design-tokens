@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/shadow-tokens",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "WaPo Shadow Tokens",
   "main": "build.js",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/typography-tokens",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "WaPo typography tokens",
   "main": "build.js",
   "scripts": {
