@@ -32,7 +32,7 @@ const typeDocBlock = (category, type) => {
       >
         The quick brown fox jumps over the lazy dog.
       </h3>
-      <p className="font-xxxs gray-dark mt-xs mb-md">
+      <p className="font-xxs gray-dark mt-xs mb-md">
         {typographyTokens.typography[type][category].value}
       </p>
     </div>
