@@ -34,10 +34,6 @@ jobs:
             packages/**/dist
             !packages/**/node_modules
 
-      - uses: danger/danger-js@10.6.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: chromaui/action@v1
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
