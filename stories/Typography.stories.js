@@ -32,7 +32,7 @@ const typeDocBlock = (category, type) => {
       >
         The quick brown fox jumps over the lazy dog.
       </h3>
-      <p className="font-xxxs gray-dark mt-xs mb-md">
+      <p className="font-xxs gray-dark mt-xs mb-md">
         {typographyTokens.typography[type][category].value}
       </p>
     </div>
@@ -93,7 +93,7 @@ export const SupportedGlyphs = () => (
   <div>
     {["headline", "san-serif", "body"].map((typeface) => (
       <h3 className={`font--${typeface} font-xxxl mb-xxl lh-md wrap`}>
-        {typographyTokens.typography.glyphs.value.replace(/(.)/g, ' $1')}
+        {typographyTokens.typography.glyphs.value.replace(/(.)/g, " $1")}
       </h3>
     ))}
   </div>
@@ -103,9 +103,8 @@ export const CommonGlyphs = () => (
   <div>
     {["headline", "san-serif", "body"].map((typeface) => (
       <h3 className={`font--${typeface} font-xxxl mb-xxl lh-md`}>
-        a b c d e f g h i j k l m n o p q r s t u v w x y z 
-        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
-        0 1 2 3 4 5 6 7 8 9
+        a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J
+        K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9
         {`( { [ . , ¡ ! ¿ ? * ] } )`}
         {`# $ € £ % @ & ¶ § ¢ † ‡`}
         {`° _ : = ; + − - × ÷ ' ‘ ’ " “ ”`}
@@ -127,11 +126,8 @@ export const Ligatures = () => (
 // Tests for common Washington Post kerning issues
 export const Kerning = () => (
   <h3 className="font--headline font-xxxl">
-    Washington
-    WASHINGTON
-    VA
-    ARROWROOT BARLEY CHERVIL DUMPLING ENDIVE FLAXSEED GARBANZO HIJIKI ISHTU
-    JICAMA KALE LYCHEE MARJORAM NECTARINE OXTAIL PIZZA QUINOA ROQUEFORT SQUASH
-    TOFU UPPUMA VANILLA WHEAT XERGIS YOGURT ZWEIBACK
+    Washington WASHINGTON VA ARROWROOT BARLEY CHERVIL DUMPLING ENDIVE FLAXSEED
+    GARBANZO HIJIKI ISHTU JICAMA KALE LYCHEE MARJORAM NECTARINE OXTAIL PIZZA
+    QUINOA ROQUEFORT SQUASH TOFU UPPUMA VANILLA WHEAT XERGIS YOGURT ZWEIBACK
   </h3>
 );
