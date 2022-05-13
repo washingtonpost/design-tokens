@@ -1,7 +1,7 @@
 {
   "name": "@washingtonpost/design-tokens",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.9.0",
   "description": "Design tokens for The Washington Post design system",
   "scripts": {
     "format:prettier": "prettier-eslint --write --eslint-ignore --print-width=120 --single-quote --no-bracket-spacing",
