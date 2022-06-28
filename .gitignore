@@ -34,3 +34,5 @@ resources/dist/**
 lerna-debug.log
 
 build-storybook.log
+
+.history/.*

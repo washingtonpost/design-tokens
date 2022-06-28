@@ -12,10 +12,9 @@
     "ver": "lerna version --conventional-commits --yes --force-publish --conventional-graduate",
     "pub": "lerna publish from-git --yes --no-git-reset",
     "prepublish": "npm run build",
-    "storybook": "start-storybook -s ./fonts -p 6006",
-    "build-storybook": "build-storybook -s fonts",
-    "prepare": "node ./scripts/prepare.js",
-    "subset-fonts": "node ./fonts/subsetFonts.js && cd ./fonts/ && glyphhanger supported-characters.txt --subset=*.otf --formats=woff2"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "prepare": "node ./scripts/prepare.js"
   },
   "repository": {
     "type": "git",
